@@ -24,10 +24,10 @@ void agregarNodo(Lista *pLista, Nodo *pNodo){
 }
 void imprimirLista(Lista *pLista){
     if(pLista->inicio== NULL){ // revisamos si la lista está o no vacía
-        printf("La lista esta vacia");
+        printf("La lista esta vac%ca", 161);
     }else{ //si la lista esta vacia
         while(pLista->inicio != NULL){ // y mientras lista sea diferente a nulo 
-        printf("Nombre: %s \nCantidad: %d\nPrecio: %0.2lf\n\n", pLista->inicio->informacion);
+        printf("Nombre: %s \nCantidad en stock: %d\nPrecio unitario: %0.2lf\n\n", pLista->inicio->informacion);
         pLista->inicio = pLista->inicio->siguiente; //condicionamos a que inicio apunte a su siguiente (asi hasta null)
         } //De esa manera aseguramos que el contador vaya navegando atraves de los apuntadores
     }
