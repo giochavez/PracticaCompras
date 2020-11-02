@@ -23,5 +23,12 @@ void agregarNodo(Lista *pLista, Nodo *pNodo){
     pLista->fin = pNodo;
 }
 void imprimirLista(Lista *pLista){
-    printf("Se va a imprimir algo\n");
+    if(pLista->inicio== NULL){
+        printf("La lista esta vacia");
+    }else{
+        while(pLista->inicio != NULL){
+        printf("Nombre: %s \nCantidad: %d\nPrecio: %0.2lf\n\n", pLista->inicio->informacion);
+        pLista->inicio = pLista->inicio->siguiente;
+        }
+    }
 }
